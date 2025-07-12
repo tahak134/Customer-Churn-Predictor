@@ -37,7 +37,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load and display churn distribution with enhanced visualization
-data_path = "data/Telco-Customer-Churn.csv"
+data_path = "streamlit_app/data/Telco-Customer-Churn.csv"
 
 # Create columns for layout
 col1, col2, col3 = st.columns([2, 1, 2])
@@ -167,8 +167,8 @@ else:
 
 # Load model and features
 try:
-    model = joblib.load("model/churn_model.pkl")
-    features = joblib.load("model/feature_columns.pkl")
+    model = joblib.load("streamlit_app/model/churn_model.pkl")
+    features = joblib.load("streamlit_app/model/feature_columns.pkl")
     model_loaded = True
 except:
     st.error("🚨 Model files not found. Please ensure model files are in the correct location.")
