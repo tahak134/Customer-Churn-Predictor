@@ -17,12 +17,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-with open("styles.css") as f:
+with open("streamlit_app/styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
 # Theme toggle
 def toggle_theme():
+    
     if 'dark_theme' not in st.session_state:
         st.session_state.dark_theme = True
     st.session_state.dark_theme = not st.session_state.dark_theme
@@ -36,7 +37,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load and display churn distribution with enhanced visualization
-data_path = "../data/Telco-Customer-Churn.csv"
+data_path = "data/Telco-Customer-Churn.csv"
 
 # Create columns for layout
 col1, col2, col3 = st.columns([2, 1, 2])
@@ -166,8 +167,8 @@ else:
 
 # Load model and features
 try:
-    model = joblib.load("../model/churn_model.pkl")
-    features = joblib.load("../model/feature_columns.pkl")
+    model = joblib.load("model/churn_model.pkl")
+    features = joblib.load("model/feature_columns.pkl")
     model_loaded = True
 except:
     st.error("🚨 Model files not found. Please ensure model files are in the correct location.")
