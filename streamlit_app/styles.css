@@ -1,0 +1,76 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body, .stApp {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Header Box */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+.main-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #cccccc;
+}
+
+/* Card/Box Style */
+.metric-card, .chart-container, .stat-item {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(to right, #ffffff, #9ac5f4);
+    color: rgb(24, 24, 24);
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Slightly darker sidebar */
+[data-testid="stSidebar"] {
+    /*background-color: rgba(221, 229, 255, 0.751) !important;;*/
+    background: linear-gradient(135deg, #d6d3ff 0%, rgba(221, 229, 255, 0.582) 100%);
+}
+
+.stButton > button:hover {
+    background: linear-gradient(to right, #d1d8d6, #93c9ff);
+    transform: scale(1.02);
+}
+.css-18e3th9 {
+    font-family: 'Poppins', sans-serif !important;
+}
+/* Hide Streamlit branding */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+header { visibility: hidden; }
